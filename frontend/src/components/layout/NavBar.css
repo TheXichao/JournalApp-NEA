@@ -1,0 +1,46 @@
+/* src/components/layout/Navbar.css */
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  li {
+    margin-right: 15px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #ffa500; /* Change the color on hover as per your preference */
+    transition: color 0.3s ease;
+  }
+  
+  /* Style for the Logout button */
+  li[style] {
+    color: #ffa500; /* Change the color as per your preference */
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  li[style]:hover {
+    color: #ff6347; /* Change the color on hover as per your preference */
+    transition: color 0.3s ease;
+  }
+  

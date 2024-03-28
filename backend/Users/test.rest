@@ -1,0 +1,49 @@
+# this register the user
+POST http://127.0.0.1:8000/user/register/
+Content-Type: application/json
+
+{
+    "email": "demo",
+    "password": "bob"
+}
+###
+POST http://127.0.0.1:8000/user/login/
+Content-Type: application/json
+
+{
+    "email": "demo2@demo.com",
+    "password": "bob"
+}
+
+###
+
+# 3e6ee5a3567f2abf016d301640a6d453e3d9c1fd
+POST http://127.0.0.1:8000/user/login/
+Content-Type: application/json
+
+{
+    "email": "demo2@demo.com",
+    "password": "wrong password"
+}
+
+###
+POST http://127.0.0.1:8000/user/login/
+Content-Type: application/json
+
+{
+    "email": "invalid@email.com",
+    "password": "wrong password"
+}
+###
+POST http://127.0.0.1:8000/user/update_email_prompt/
+Content-Type: application/json
+Authorization: Token 6cb9186550c545abc1ce76129730873daf7bee6d
+
+{
+    "email_prompt": true
+}
+###
+
+GET http://127.0.0.1:8000/user/test_user/
+Content-Type: application/json
+Authorization: Token badtokenthatisnotvalid

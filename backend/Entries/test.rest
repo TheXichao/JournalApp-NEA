@@ -1,0 +1,40 @@
+# Predefined entries to test if I can retrieve them 
+GET http://127.0.0.1:8000/entry/sample/
+Content-Type: application/json
+
+###
+
+# this is the token for user 22
+GET http://127.0.0.1:8000/entry/testUser/
+Authorization: Token 3b1616d4665f35919c2b80c64e6ce086c94b62e0
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:8000/entry/createEntry/
+Authorization: Token 3b1616d4665f35919c2b80c64e6ce086c94b62e0
+Content-Type: application/json
+    
+    {
+        "title": "new entry",
+        "content": "this is a test"
+    }
+
+###
+GET http://127.0.0.1:8000/entry/getEntries/
+Authorization: Token 3b1616d4665f35919c2b80c64e6ce086c94b62e0
+Content-Type: application/json
+
+
+###
+GET http://127.0.0.1:8000/entry/deleteEntry/
+Authorization: Token 3b1616d4665f35919c2b80c64e6ce086c94b62e0
+Content-Type: application/json
+
+    {
+        "entry_id":  10 
+    }
+
+###
+
+GET http://127.0.0.1:8000/entry/getJournalStatistics/
+Authorization: Token 3b1616d4665f35919c2b80c64e6ce086c94b62e0
